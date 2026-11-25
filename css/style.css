@@ -1,25 +1,25 @@
-
 body {
     font-family: "Inter", system-ui, sans-serif;
-    background-color: #f3f4f6;
+    background-color: #f8fafc;
 }
-
 
 nav a[aria-current="page"] {
     font-weight: 700;
-    color: #1d4ed8;
+    color: #0f766e;
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
-
 :focus-visible {
-    outline: 3px solid #1d4ed8;
+    outline: 3px solid #0f766e;
     outline-offset: 2px;
 }
 
-
 #menu-knop:focus-visible + label {
-    outline: 3px solid #1d4ed8;
+    outline: 3px solid #0f766e;
     outline-offset: 2px;
+}
+
+footer :focus-visible {
+    outline-color: #fcd34d;
 }
