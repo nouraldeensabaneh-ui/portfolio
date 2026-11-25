@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Nouraldeen</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold">Naar de inhoud</a>
+
+    <div id="top" class="w-full min-h-screen flex flex-col text-gray-800">
+
+        <header class="flex flex-wrap items-center justify-between gap-2 px-6 py-4 bg-white border-b border-gray-300">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold tracking-tight hover:text-blue-700">
+                <img src="images/logo.svg" alt="" width="32" height="32" class="w-8 h-8">
+                <span>Nouraldeen<span class="text-blue-700">.</span></span>
+            </a>
+            <input type="checkbox" id="menu-knop" class="peer sr-only">
+            <label for="menu-knop" class="md:hidden flex items-center gap-2 cursor-pointer border border-gray-300 px-3 py-2 text-sm hover:bg-gray-100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                Menu
+            </label>
+            <nav aria-label="Hoofdmenu" class="hidden w-full peer-checked:block md:block md:w-auto">
+                <ul class="flex flex-col md:flex-row gap-1 text-sm">
+                    <li><a href="index.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Home</a></li>
+                    <li><a href="portfolio.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Portfolio</a></li>
+                    <li><a href="project.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Project</a></li>
+                    <li><a href="contact.html" aria-current="page" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="inhoud" class="flex-1 bg-white p-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-blue-700">Contact</p>
+            <h1 class="mt-1 text-3xl font-bold tracking-tight mb-3">Laten we praten</h1>
+            <p class="text-sm mb-8 max-w-xl">Zoek je een stagiair voor systeem- of netwerkbeheer, of heb je een vraag over een van mijn projecten? Stuur me een bericht of contacteer me rechtstreeks.</p>
+
+         
+            <section aria-labelledby="formulier-titel" class="max-w-2xl">
+                <h2 id="formulier-titel" class="text-xl font-bold tracking-tight mb-4">Stuur me een bericht</h2>
+
+                <form action="#" method="get" class="space-y-6">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="naam" class="block text-sm font-bold mb-1">Naam</label>
+                            <input type="text" id="naam" name="naam" autocomplete="name" required aria-describedby="naam-fout"
+                                   class="peer w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-sm hover:border-blue-700 user-invalid:border-red-600">
+                            <p id="naam-fout" class="mt-1 hidden text-sm text-red-700 peer-user-invalid:block">Vul je naam in, zodat ik weet met wie ik praat.</p>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-bold mb-1">E-mailadres</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hulp email-fout"
+                                   class="peer w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-sm hover:border-blue-700 user-invalid:border-red-600">
+                            <p id="email-hulp" class="mt-1 text-xs text-gray-500">Ik antwoord op dit adres, meestal binnen twee werkdagen.</p>
+                            <p id="email-fout" class="mt-1 hidden text-sm text-red-700 peer-user-invalid:block">Dit is geen geldig e-mailadres. Controleer of er een @ en een punt in staan, bijvoorbeeld naam@voorbeeld.be.</p>
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <legend class="text-sm font-bold mb-2">Waarover gaat je bericht?</legend>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <div class="flex items-center gap-2 rounded-lg border-2 border-gray-300 px-4 py-3 text-sm has-checked:border-blue-700 has-checked:bg-blue-50">
+                                <input type="radio" id="reden-stage" name="reden" value="stage" required class="accent-blue-700">
+                                <label for="reden-stage">Een stageplaats</label>
+                            </div>
+                            <div class="flex items-center gap-2 rounded-lg border-2 border-gray-300 px-4 py-3 text-sm has-checked:border-blue-700 has-checked:bg-blue-50">
+                                <input type="radio" id="reden-project" name="reden" value="project" class="accent-blue-700">
+                                <label for="reden-project">Een van mijn projecten</label>
+                            </div>
+                            <div class="flex items-center gap-2 rounded-lg border-2 border-gray-300 px-4 py-3 text-sm has-checked:border-blue-700 has-checked:bg-blue-50">
+                                <input type="radio" id="reden-anders" name="reden" value="anders" class="accent-blue-700">
+                                <label for="reden-anders">Iets anders</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <label for="bericht" class="block text-sm font-bold mb-1">Bericht</label>
+                        <textarea id="bericht" name="bericht" rows="6" minlength="10" required aria-describedby="bericht-hulp bericht-fout"
+                                  class="peer w-full rounded-lg border-2 border-gray-300 px-4 py-3 text-sm hover:border-blue-700 user-invalid:border-red-600"></textarea>
+                        <p id="bericht-hulp" class="mt-1 text-xs text-gray-500">Vertel kort wat je zoekt of welke vraag je hebt.</p>
+                        <p id="bericht-fout" class="mt-1 hidden text-sm text-red-700 peer-user-invalid:block">Je bericht is leeg of te kort. Schrijf minstens 10 tekens.</p>
+                    </div>
+
+                    <p class="text-xs text-gray-500">Ik gebruik je gegevens alleen om op je bericht te antwoorden. Ik deel ze met niemand en verwijder ze zodra ons gesprek afgerond is.</p>
+
+                    <button type="submit" class="inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-6 py-3">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                        Verstuur bericht
+                    </button>
+
+                </form>
+            </section>
+
+            <section aria-labelledby="gegevens-titel" class="mt-12 pt-8 border-t border-gray-300 max-w-2xl">
+                <h2 id="gegevens-titel" class="text-xl font-bold tracking-tight mb-4">Contactgegevens</h2>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-center gap-3 border border-gray-300 p-4">
+                        <svg aria-hidden="true" class="shrink-0 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <a href="mailto:jouw.adres@voorbeeld.be" class="underline hover:text-blue-700">jouw.adres@voorbeeld.be</a>
+                    </li>
+                    <li class="flex items-center gap-3 border border-gray-300 p-4">
+                        <svg aria-hidden="true" class="shrink-0 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+32000000000" class="underline hover:text-blue-700">+32 4xx xx xx xx</a>
+                    </li>
+                    <li class="flex items-center gap-3 border border-gray-300 p-4">
+                        <svg aria-hidden="true" class="shrink-0 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Antwerpen, België</span>
+                    </li>
+                </ul>
+
+                <h2 class="mt-8 text-xs font-bold uppercase tracking-widest text-blue-700 mb-3">Socials</h2>
+                <ul class="flex gap-3">
+                    <li>
+                        <a href="#" class="block p-3 border border-gray-300 hover:bg-gray-100 hover:text-blue-700">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block p-3 border border-gray-300 hover:bg-gray-100 hover:text-blue-700">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                            <span class="sr-only">X</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="flex flex-col sm:flex-row items-center justify-between gap-2 px-6 py-4 bg-white border-t border-gray-300 text-xs text-gray-600">
+            <p>© 2026 Nouraldeen</p>
+            <p>Student Systeem- en Netwerkbeheer aan AP Hogeschool, Antwerpen</p>
+            <a href="#top" class="p-2 hover:text-blue-700">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+                <span class="sr-only">Terug naar boven</span>
+            </a>
+        </footer>
+
+    </div>
+
+</body>
+</html>

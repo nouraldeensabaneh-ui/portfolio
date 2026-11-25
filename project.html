@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedrijfsnetwerk met VLAN's — Nouraldeen</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold">Naar de inhoud</a>
+
+    <div id="top" class="w-full min-h-screen flex flex-col text-gray-800">
+
+        <header class="flex flex-wrap items-center justify-between gap-2 px-6 py-4 bg-white border-b border-gray-300">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold tracking-tight hover:text-blue-700">
+                <img src="images/logo.svg" alt="" width="32" height="32" class="w-8 h-8">
+                <span>Nouraldeen<span class="text-blue-700">.</span></span>
+            </a>
+            <input type="checkbox" id="menu-knop" class="peer sr-only">
+            <label for="menu-knop" class="md:hidden flex items-center gap-2 cursor-pointer border border-gray-300 px-3 py-2 text-sm hover:bg-gray-100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                Menu
+            </label>
+            <nav aria-label="Hoofdmenu" class="hidden w-full peer-checked:block md:block md:w-auto">
+                <ul class="flex flex-col md:flex-row gap-1 text-sm">
+                    <li><a href="index.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Home</a></li>
+                    <li><a href="portfolio.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Portfolio</a></li>
+                    <li><a href="project.html" aria-current="page" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Project</a></li>
+                    <li><a href="contact.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="flex flex-col md:flex-row flex-1 bg-white">
+
+            <main id="inhoud" class="flex-1 p-6">
+                <a href="portfolio.html" class="inline-flex items-center gap-2 text-sm underline hover:text-blue-700">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+                    Terug naar het portfolio
+                </a>
+
+                <p class="mt-6 text-xs font-bold uppercase tracking-widest text-blue-700">Netwerken · Cisco</p>
+                <h1 class="mt-1 text-3xl font-bold tracking-tight">Bedrijfsnetwerk met VLAN's</h1>
+                <p class="mt-3 text-sm max-w-2xl leading-relaxed">Een klein bedrijf heeft drie afdelingen: administratie, verkoop en een gastennetwerk. Ze mogen niet zomaar aan elkaars toestellen. Voor dit labo ontwierp ik een netwerk waarin elke afdeling een eigen VLAN heeft, met een router die bepaalt welk verkeer tussen de VLAN's mag.</p>
+
+               
+                <figure class="mt-6 max-w-3xl">
+                    <img src="images/project-1.jpg" alt="Netwerkschema in Cisco Packet Tracer met een router, twee switches en drie VLAN's in verschillende kleuren" width="1200" height="675"
+                         class="w-full aspect-video object-cover bg-gray-200 border border-gray-300">
+                    <figcaption class="mt-2 text-xs text-gray-500">Het netwerkschema in Cisco Packet Tracer, met een kleur per VLAN.</figcaption>
+                </figure>
+
+                <section class="mt-8 max-w-2xl">
+                    <h2 class="text-xl font-bold tracking-tight mb-3">Wat ik maakte</h2>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex gap-3">
+                            <svg aria-hidden="true" class="shrink-0 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                            <span>Een IP-plan met een apart subnet per afdeling, berekend met subnetting.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <svg aria-hidden="true" class="shrink-0 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                            <span>VLAN's en trunkpoorten op de switches, zodat elke poort bij de juiste afdeling hoort.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <svg aria-hidden="true" class="shrink-0 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                            <span>Routing tussen de VLAN's met router-on-a-stick, en DHCP zodat toestellen automatisch een adres krijgen.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <svg aria-hidden="true" class="shrink-0 text-blue-700" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                            <span>Access control lists die het gastennetwerk afschermen van de rest van het bedrijf.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="mt-8 max-w-2xl">
+                    <h2 class="text-xl font-bold tracking-tight mb-3">Wat ik leerde</h2>
+                    <p class="text-sm leading-relaxed">De meeste tijd ging niet naar het configureren, maar naar het zoeken waarom iets niet werkte. Met ping, traceroute en show-commando's leerde ik stap voor stap uitsluiten waar een fout zat: in de switch, in de trunk of in de router.</p>
+                </section>
+            </main>
+
+            <aside class="md:w-1/4 p-6 border-t md:border-t-0 md:border-l border-gray-300">
+                <section class="mb-6">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Projectinfo</h2>
+                    <dl class="text-sm space-y-2">
+                        <div>
+                            <dt class="font-bold">Soort</dt>
+                            <dd>Labo-opdracht</dd>
+                        </div>
+                        <div>
+                            <dt class="font-bold">Jaar</dt>
+                            <dd>2026</dd>
+                        </div>
+                    </dl>
+                </section>
+                <section>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Technologieën</h2>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Cisco Packet Tracer</li>
+                        <li>Cisco IOS</li>
+                        <li>IPv4 en subnetting</li>
+                        <li>DHCP en ACL's</li>
+                    </ul>
+                </section>
+            </aside>
+
+        </div>
+
+        <footer class="flex flex-col sm:flex-row items-center justify-between gap-2 px-6 py-4 bg-white border-t border-gray-300 text-xs text-gray-600">
+            <p>© 2026 Nouraldeen</p>
+            <p>Student Systeem- en Netwerkbeheer aan AP Hogeschool, Antwerpen</p>
+            <a href="#top" class="p-2 hover:text-blue-700">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+                <span class="sr-only">Terug naar boven</span>
+            </a>
+        </footer>
+
+    </div>
+
+</body>
+</html>

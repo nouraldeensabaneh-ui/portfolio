@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Nouraldeen</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold">Naar de inhoud</a>
+
+    <div id="top" class="w-full min-h-screen flex flex-col text-gray-800">
+
+        <header class="flex flex-wrap items-center justify-between gap-2 px-6 py-4 bg-white border-b border-gray-300">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold tracking-tight hover:text-blue-700">
+                <img src="images/logo.svg" alt="" width="32" height="32" class="w-8 h-8">
+                <span>Nouraldeen<span class="text-blue-700">.</span></span>
+            </a>
+            <input type="checkbox" id="menu-knop" class="peer sr-only">
+            <label for="menu-knop" class="md:hidden flex items-center gap-2 cursor-pointer border border-gray-300 px-3 py-2 text-sm hover:bg-gray-100">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                Menu
+            </label>
+            <nav aria-label="Hoofdmenu" class="hidden w-full peer-checked:block md:block md:w-auto">
+                <ul class="flex flex-col md:flex-row gap-1 text-sm">
+                    <li><a href="index.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Home</a></li>
+                    <li><a href="portfolio.html" aria-current="page" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Portfolio</a></li>
+                    <li><a href="project.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Project</a></li>
+                    <li><a href="contact.html" class="block px-3 py-2 hover:bg-gray-100 hover:text-blue-700">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="flex flex-col md:flex-row flex-1 bg-white">
+
+            <main id="inhoud" class="flex-1 p-6">
+                <p class="text-xs font-bold uppercase tracking-widest text-blue-700">Portfolio</p>
+                <h1 class="mt-1 text-3xl font-bold tracking-tight mb-3">Wat ik gebouwd heb</h1>
+                <p class="text-sm mb-6 max-w-2xl">Een overzicht van mijn projecten uit de labo's van Systeem- en Netwerkbeheer en van wat ik thuis uitprobeer. Bij elk project staat wat ik er zelf aan deed.</p>
+
+                <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <article class="border border-gray-300 flex flex-col">
+                        <img src="images/project-1.jpg" alt="Netwerkschema met switches, een router en drie VLAN's" width="640" height="360"
+                             class="w-full aspect-video object-cover bg-gray-200">
+                        <div class="p-4 flex flex-col gap-2 flex-1">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gray-500">Netwerken · Cisco</p>
+                            <h2 class="text-base font-bold">Bedrijfsnetwerk met VLAN's</h2>
+                            <p class="text-sm flex-1">Een netwerk voor een klein bedrijf met een VLAN per afdeling, routing tussen de VLAN's en DHCP, gebouwd in Cisco Packet Tracer.</p>
+                            <a href="project.html" class="self-start bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2">Bekijk project</a>
+                        </div>
+                    </article>
+
+                    <article class="border border-gray-300 flex flex-col">
+                        <img src="images/project-2.jpg" alt="Het beheervenster van Active Directory met gebruikers en groepen" width="640" height="360"
+                             class="w-full aspect-video object-cover bg-gray-200">
+                        <div class="p-4 flex flex-col gap-2 flex-1">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gray-500">Servers · Windows</p>
+                            <h2 class="text-base font-bold">Windows Server en Active Directory</h2>
+                            <p class="text-sm flex-1">Een domeincontroller met DNS en DHCP, gebruikers en groepen per afdeling en groepsbeleid voor gedeelde mappen en printers.</p>
+                            <a href="project.html" class="self-start bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2">Bekijk project</a>
+                        </div>
+                    </article>
+
+                    <article class="border border-gray-300 flex flex-col">
+                        <img src="images/project-3.jpg" alt="Een terminalvenster met de configuratie van een Linux-webserver" width="640" height="360"
+                             class="w-full aspect-video object-cover bg-gray-200">
+                        <div class="p-4 flex flex-col gap-2 flex-1">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gray-500">Servers · Linux</p>
+                            <h2 class="text-base font-bold">Linux-webserver</h2>
+                            <p class="text-sm flex-1">Een Ubuntu Server met Apache, beveiligd met een firewall en SSH-sleutels, volledig opgezet via de command line.</p>
+                            <a href="project.html" class="self-start bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2">Bekijk project</a>
+                        </div>
+                    </article>
+
+                    <article class="border border-gray-300 flex flex-col">
+                        <img src="images/project-4.jpg" alt="De firewallregels in de webinterface van pfSense" width="640" height="360"
+                             class="w-full aspect-video object-cover bg-gray-200">
+                        <div class="p-4 flex flex-col gap-2 flex-1">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gray-500">Beveiliging · pfSense</p>
+                            <h2 class="text-base font-bold">Firewall met pfSense</h2>
+                            <p class="text-sm flex-1">Een firewall tussen een intern netwerk en het internet, met regels per netwerk en een aparte zone voor gasten.</p>
+                            <a href="project.html" class="self-start bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2">Bekijk project</a>
+                        </div>
+                    </article>
+
+                    <article class="border border-gray-300 flex flex-col">
+                        <img src="images/project-5.jpg" alt="Het dashboard van Proxmox met enkele virtuele machines" width="640" height="360"
+                             class="w-full aspect-video object-cover bg-gray-200">
+                        <div class="p-4 flex flex-col gap-2 flex-1">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gray-500">Virtualisatie · thuisproject</p>
+                            <h2 class="text-base font-bold">Mijn homelab</h2>
+                            <p class="text-sm flex-1">Een oude pc omgebouwd tot server met Proxmox. Ik test er nieuwe besturingssystemen en diensten zonder mijn eigen computer te riskeren.</p>
+                            <a href="project.html" class="self-start bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2">Bekijk project</a>
+                        </div>
+                    </article>
+
+                    <article class="border border-gray-300 flex flex-col">
+                        <img src="images/project-6.jpg" alt="De homepagina van deze portfoliowebsite op een laptop en een telefoon" width="640" height="360"
+                             class="w-full aspect-video object-cover bg-gray-200">
+                        <div class="p-4 flex flex-col gap-2 flex-1">
+                            <p class="text-xs font-bold uppercase tracking-widest text-gray-500">Web · HTML &amp; Tailwind</p>
+                            <h2 class="text-base font-bold">Deze portfoliowebsite</h2>
+                            <p class="text-sm flex-1">Een responsieve site van vier pagina's, opgebouwd vanuit mijn eigen wireframes met HTML en Tailwind CSS.</p>
+                            <a href="project.html" class="self-start bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2">Bekijk project</a>
+                        </div>
+                    </article>
+
+                </section>
+            </main>
+
+            <aside class="md:w-1/5 p-6 border-t md:border-t-0 md:border-l border-gray-300">
+                <section class="mb-6">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Categorieën</h2>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Netwerken</li>
+                        <li>Servers</li>
+                        <li>Beveiliging</li>
+                        <li>Virtualisatie</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-blue-700 mb-2">Technologieën</h2>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Cisco IOS</li>
+                        <li>Windows Server</li>
+                        <li>Ubuntu Linux</li>
+                        <li>pfSense en Proxmox</li>
+                    </ul>
+                </section>
+            </aside>
+
+        </div>
+
+        <footer class="flex flex-col sm:flex-row items-center justify-between gap-2 px-6 py-4 bg-white border-t border-gray-300 text-xs text-gray-600">
+            <p>© 2026 Nouraldeen</p>
+            <p>Student Systeem- en Netwerkbeheer aan AP Hogeschool, Antwerpen</p>
+            <a href="#top" class="p-2 hover:text-blue-700">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+                <span class="sr-only">Terug naar boven</span>
+            </a>
+        </footer>
+
+    </div>
+
+</body>
+</html>
